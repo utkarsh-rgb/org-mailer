@@ -1,15 +1,30 @@
 {
   "name": "org-mailer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
-  "keywords": [],
-  "homepage": "https://github.com/your-username/org-mailer#readme",
+  "keywords": [
+  "email",
+  "mailer",
+  "nodemailer",
+  "smtp",
+  "gmail",
+  "outlook",
+  "office365",
+  "email-sender",
+  "reset-password",
+  "otp",
+  "one-time-password",
+  "email-verification",
+  "nodejs-email",
+  "transactional-email"
+],
+  "homepage": "https://github.com/utkarsh-rgb/org-mailer#readme",
   "bugs": {
-    "url": "https://github.com/your-username/org-mailer/issues"
+    "url": "https://github.com/utkarsh-rgb/org-mailer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/org-mailer.git"
+    "url": "https://github.com/utkarsh-rgb/org-mailer.git"
   },
   "license": "MIT",
   "author": "Utkarsh Gupta",
