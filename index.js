@@ -1,49 +1,31 @@
-// index.js
 const nodemailer = require('nodemailer');
-require('dotenv').config();
+const {getSMTPSettings} = require('./automapping');
 
-/**
- * Send an email using SMTP credentials from .env
- *
- * @param {Object} options - Email options
- * @param {string} options.to - Recipient email
- * @param {string} options.subject - Subject line
- * @param {string} [options.text] - Plain text content
- * @param {string} [options.html] - HTML content
- * @returns {Promise<Object>} - Result from nodemailer
- */
-async function sendEmail({ to, subject, text = '', html = '' }) {
-  if (!to || !subject) {
-    throw new Error("Missing required fields: 'to' and 'subject'");
-  }
+async function sendMail({ to, subject, text, html }) {
+  const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
+  const config = await getSMTPSettings(SMTP_EMAIL);
+
+  if (config.error) throw new Error(config.error);
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === 'true', // true for 465
-    requireTLS: process.env.SMTP_REQUIRE_TLS === 'true',
+    host: config.host,
+    port: config.port,
+    secure: config.secure,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: SMTP_EMAIL,
+      pass: SMTP_PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: `"${process.env.MAIL_FROM_NAME}" <${process.env.SMTP_USER}>`,
+    from: SMTP_EMAIL,
     to,
     subject,
     text,
     html,
   };
 
-  try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log("📨 Email sent:", info.messageId);
-    return info;
-  } catch (error) {
-    console.error("❌ Error sending email:", error.message);
-    throw error;
-  }
+  return transporter.sendMail(mailOptions);
 }
 
-module.exports = sendEmail;
+module.exports = sendMail;

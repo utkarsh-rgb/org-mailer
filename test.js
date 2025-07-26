@@ -1,16 +1,15 @@
-
-const sendEmail = require('./index');
 require('dotenv').config();
+const sendMail = require('./index');
 
 (async () => {
   try {
-    await sendEmail({
-      to: 'recipient@example.com', 
-      subject: 'Test Email from universal-mailer 📩',
-      text: 'This is a plain text test email.',
-      html: '<h1>Hello from universal-mailer!</h1><p>This is a test email sent using <strong>nodemailer</strong> via Gmail SMTP.</p>',
+    await sendMail({
+      to: 'example@example.com',
+      subject: 'Test Email',
+      text: 'Hello from quick-mailer!',
     });
+    console.log('✅ Email sent!');
   } catch (err) {
-    console.error("❌ Failed to send test email:", err);
+    console.error(err);
   }
 })();

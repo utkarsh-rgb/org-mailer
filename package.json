@@ -1,30 +1,30 @@
 {
-  "name": "universal-mailer",
-  "version": "2.1.2",
+  "name": "quick-mailer",
+  "version": "1.0.0",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
   "keywords": [
-  "email",
-  "mailer",
-  "nodemailer",
-  "smtp",
-  "gmail",
-  "outlook",
-  "office365",
-  "email-sender",
-  "reset-password",
-  "otp",
-  "one-time-password",
-  "email-verification",
-  "nodejs-email",
-  "transactional-email"
-],
-  "homepage": "https://github.com/utkarsh-rgb/universal-mailer#readme",
+    "email",
+    "mailer",
+    "nodemailer",
+    "smtp",
+    "gmail",
+    "outlook",
+    "office365",
+    "email-sender",
+    "reset-password",
+    "otp",
+    "one-time-password",
+    "email-verification",
+    "nodejs-email",
+    "transactional-email"
+  ],
+  "homepage": "https://github.com/utkarsh-rgb/quick-mailer#readme",
   "bugs": {
-    "url": "https://github.com/utkarsh-rgb/universal-mailer/issues"
+    "url": "https://github.com/utkarsh-rgb/quick-mailer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/utkarsh-rgb/universal-mailer.git"
+    "url": "https://github.com/utkarsh-rgb/quick-mailer.git"
   },
   "license": "MIT",
   "author": "Utkarsh Gupta",
@@ -34,8 +34,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "dns2": "^2.1.0",
     "dotenv": "^17.2.1",
     "nodemailer": "^7.0.5"
-  },
-  "devDependencies": {}
+  }
 }
