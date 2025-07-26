@@ -77,7 +77,7 @@ Falling back to MX record lookup for custom domains
 
 ## 📤 Sending an Email
 ```bash
-const { sendEmail } = require('smart-mailer');
+const  sendEmail  = require('smart-mailer');
 
 sendEmail({
   to: 'recipient@example.com',
