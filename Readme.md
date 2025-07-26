@@ -49,6 +49,42 @@ require('dotenv').config();
   }
 })();
 ```
+## 📧 SMTP Configuration
+To send emails using this application, set the following environment variables in a .env file:
+```bash
+
+# -----------------------------------
+# SMTP SETTINGS (change these values)
+# -----------------------------------
+
+# For Gmail: smtp.gmail.com | Port 587 | Secure false
+# For Office365: smtp.office365.com | Port 587 | Secure false + TLS
+# For Zoho: smtp.zoho.com | Port 465 | Secure true
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_REQUIRE_TLS=true
+
+# -----------------------------------
+# AUTHENTICATION
+# -----------------------------------
+SMTP_USER=your-email@gmail.com          # Replace with your SMTP username
+SMTP_PASS=your-app-password             # For Gmail, use an App Password
+
+# -----------------------------------
+# EMAIL SENDER NAME (shown in inbox)
+# -----------------------------------
+MAIL_FROM_NAME=Your Name                # This name appears in the recipient's inbox
+```
+🔐 Note:
+- Gmail requires App Passwords if 2-Step Verification is enabled.
+👉 [How to generate App Passwords for Gmail](https://support.google.com/accounts/answer/185833)
+
+
+- Make sure less secure apps are allowed or app password is used if applicable.
+
+- Always keep your .env file private and never commit it to version control.
 
 ## 📜 Function Signature
 
@@ -69,6 +105,7 @@ Upon success, logs:
 📨 Email sent: <message-id>
 
 ```
+Error Logs:
 ```bash
 ❌ Error sending email: [error-message]
 ```
