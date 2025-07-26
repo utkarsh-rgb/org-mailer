@@ -1,8 +1,8 @@
-# quick-mailer
+# smart-mailer
 
-![npm](https://img.shields.io/npm/v/quick-mailer)
-![license](https://img.shields.io/npm/l/quick-mailer)
-![issues](https://img.shields.io/github/issues/utkarsh-rgb/quick-mailer)
+![npm](https://img.shields.io/npm/v/smart-mailer)
+![license](https://img.shields.io/npm/l/smart-mailer)
+![issues](https://img.shields.io/github/issues/utkarsh-rgb/smart-mailer)
 
 A universal email sending utility for Node.js that auto-detects SMTP settings based on the email domain. Supports Gmail, Outlook, Office365, Zoho, Yahoo, and custom domains via MX record lookup.
 
@@ -29,23 +29,23 @@ A universal email sending utility for Node.js that auto-detects SMTP settings ba
 ## 🚀 Installation
 
 ```bash
-npm install quick-mailer
+npm install smart-mailer
 ```
 
 ## 📦 Usage
 
 ```bash
 // index.js
-const sendEmail = require('quick-mailer');
+const sendEmail = require('smart-mailer');
 require('dotenv').config();
 
 (async () => {
   try {
     await sendEmail({
       to: 'recipient@example.com',
-      subject: 'Test Email from quick-mailer 📩',
+      subject: 'Test Email from smart-mailer 📩',
       text: 'This is a plain text test email.',
-      html: '<h1>Hello from quick-mailer!</h1><p>This is a test email sent using <strong>nodemailer</strong>.</p>',
+      html: '<h1>Hello from smart-mailer!</h1><p>This is a test email sent using <strong>nodemailer</strong>.</p>',
     });
   } catch (err) {
     console.error("❌ Failed to send test email:", err);
@@ -77,12 +77,12 @@ Falling back to MX record lookup for custom domains
 
 ## 📤 Sending an Email
 ```bash
-const { sendEmail } = require('quick-mailer');
+const { sendEmail } = require('smart-mailer');
 
 sendEmail({
   to: 'recipient@example.com',
   subject: 'Welcome to Quick Mailer',
-  text: 'Hello from the quick-mailer package!',
+  text: 'Hello from the smart-mailer package!',
 })
   .then(() => console.log('✅ Email sent successfully!'))
   .catch((err) => console.error('❌ Failed to send email:', err));

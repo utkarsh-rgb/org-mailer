@@ -1,6 +1,6 @@
 {
-  "name": "quick-mailer",
-  "version": "1.0.0",
+  "name": "smart-mailer",
+  "version": "1.0.1",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
   "keywords": [
     "email",
@@ -18,13 +18,13 @@
     "nodejs-email",
     "transactional-email"
   ],
-  "homepage": "https://github.com/utkarsh-rgb/quick-mailer#readme",
+  "homepage": "https://github.com/utkarsh-rgb/smart-mailer#readme",
   "bugs": {
-    "url": "https://github.com/utkarsh-rgb/quick-mailer/issues"
+    "url": "https://github.com/utkarsh-rgb/smart-mailer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/utkarsh-rgb/quick-mailer.git"
+    "url": "https://github.com/utkarsh-rgb/smart-mailer.git"
   },
   "license": "MIT",
   "author": "Utkarsh Gupta",

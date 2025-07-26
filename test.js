@@ -6,7 +6,7 @@ const sendMail = require('./index');
     await sendMail({
       to: 'example@example.com',
       subject: 'Test Email',
-      text: 'Hello from quick-mailer!',
+      text: 'Hello from smart-mailer!',
     });
     console.log('✅ Email sent!');
   } catch (err) {
