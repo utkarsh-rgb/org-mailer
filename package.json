@@ -1,6 +1,6 @@
 {
-  "name": "org-mailer",
-  "version": "2.0.0",
+  "name": "universal-mailer",
+  "version": "2.1.1",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
   "keywords": [
   "email",
@@ -18,13 +18,13 @@
   "nodejs-email",
   "transactional-email"
 ],
-  "homepage": "https://github.com/utkarsh-rgb/org-mailer#readme",
+  "homepage": "https://github.com/utkarsh-rgb/universal-mailer#readme",
   "bugs": {
-    "url": "https://github.com/utkarsh-rgb/org-mailer/issues"
+    "url": "https://github.com/utkarsh-rgb/universal-mailer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/utkarsh-rgb/org-mailer.git"
+    "url": "https://github.com/utkarsh-rgb/universal-mailer.git"
   },
   "license": "MIT",
   "author": "Utkarsh Gupta",

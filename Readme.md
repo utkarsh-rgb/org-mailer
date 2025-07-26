@@ -1,8 +1,8 @@
-# org-mailer
+# universal-mailer
 
-![npm](https://img.shields.io/npm/v/org-mailer)
-![license](https://img.shields.io/npm/l/org-mailer)
-![issues](https://img.shields.io/github/issues/utkarsh-rgb/org-mailer)
+![npm](https://img.shields.io/npm/v/universal-mailer)
+![license](https://img.shields.io/npm/l/universal-mailer)
+![issues](https://img.shields.io/github/issues/utkarsh-rgb/universal-mailer)
 
 
 Send emails effortlessly using Node.js and SMTP with environment configuration.  
@@ -26,23 +26,23 @@ Supports Gmail by default, with easy customization for other providers like Offi
 ## 🚀 Installation
 
 ```bash
-npm install org-mailer
+npm install universal-mailer
 ```
 
 ## 📦 Usage
 
 ```bash
 // index.js
-const sendEmail = require('org-mailer');
+const sendEmail = require('universal-mailer');
 require('dotenv').config();
 
 (async () => {
   try {
     await sendEmail({
       to: 'recipient@example.com',
-      subject: 'Test Email from org-mailer 📩',
+      subject: 'Test Email from universal-mailer 📩',
       text: 'This is a plain text test email.',
-      html: '<h1>Hello from org-mailer!</h1><p>This is a test email sent using <strong>nodemailer</strong>.</p>',
+      html: '<h1>Hello from universal-mailer!</h1><p>This is a test email sent using <strong>nodemailer</strong>.</p>',
     });
   } catch (err) {
     console.error("❌ Failed to send test email:", err);
