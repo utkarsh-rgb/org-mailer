@@ -1,15 +1,16 @@
-require('dotenv').config();
+// index.js
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 /**
- * Sends an email using SMTP credentials from environment variables.
- * 
+ * Send an email using SMTP credentials from .env
+ *
  * @param {Object} options - Email options
  * @param {string} options.to - Recipient email
- * @param {string} options.subject - Subject of the email
- * @param {string} [options.text] - Plain text version
+ * @param {string} options.subject - Subject line
+ * @param {string} [options.text] - Plain text content
  * @param {string} [options.html] - HTML content
- * @returns {Promise<Object>} - The result of the sendMail operation
+ * @returns {Promise<Object>} - Result from nodemailer
  */
 async function sendEmail({ to, subject, text = '', html = '' }) {
   if (!to || !subject) {
@@ -19,7 +20,8 @@ async function sendEmail({ to, subject, text = '', html = '' }) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === 'true', // true for port 465
+    secure: process.env.SMTP_SECURE === 'true', // true for 465
+    requireTLS: process.env.SMTP_REQUIRE_TLS === 'true',
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
@@ -38,9 +40,9 @@ async function sendEmail({ to, subject, text = '', html = '' }) {
     const info = await transporter.sendMail(mailOptions);
     console.log("📨 Email sent:", info.messageId);
     return info;
-  } catch (err) {
-    console.error("❌ Error sending email:", err.message);
-    throw err;
+  } catch (error) {
+    console.error("❌ Error sending email:", error.message);
+    throw error;
   }
 }
 
