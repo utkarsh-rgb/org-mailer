@@ -1,10 +1,10 @@
 require('dotenv').config();
-const sendMail = require('./index');
+const sendMail= require('./index');
 
 (async () => {
   try {
     await sendMail({
-      to: 'example@example.com',
+      to: '210303105486@paruluniversity.ac.in',
       subject: 'Test Email',
       text: 'Hello from smart-mailer!',
     });

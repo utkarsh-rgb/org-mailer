@@ -1,6 +1,6 @@
 {
   "name": "smart-mailer",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
   "keywords": [
     "email",
