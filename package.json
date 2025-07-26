@@ -1,6 +1,6 @@
 {
   "name": "universal-mailer",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Simple Node.js email sender for Gmail, Outlook, or custom SMTP.",
   "keywords": [
   "email",
